@@ -1,84 +1,97 @@
-:root {
-    --bg: #121212;
-    --text: #e2e2e2;
-    --link: #64b5f6;
-    --muted: #aaaaaa;
-    --border: #2c2c2c;
-    --accent: #90caf9;
+html {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* transition: background 0.3s, color 0.3s; */
+  background: white;
+  color: black;
+}
+
+body.dark {
+    background: #121212;
+    color: white;
   }
   
-  body {
-    font-family: system-ui, sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 0 1.5rem;
-    line-height: 1.7;
-  }
-  
-  header {
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid var(--border);
-    margin-bottom: 2rem;
-  }
-  
-  header img {
-    height: 48px;
-    margin-right: 1rem;
-  }
-  
-  .header-text {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  h1 {
-    margin: 0;
-    font-size: 2.2rem;
-    color: var(--accent);
-  }
-  
-  .subtitle {
-    color: var(--muted);
-    margin-top: 0.2rem;
-    font-size: 1.1rem;
-    line-height: 1.4;
-  }
-  
-  .subtitle .affiliation {
-    font-size: 0.95rem;
-    color: var(--text);
-  }
-    
-  a {
-    color: var(--link);
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  section {
-    margin-bottom: 2.5rem;
-  }
-  
-  ul {
-    padding-left: 1.2rem;
-  }
-  
-  .project {
-    margin-bottom: 1rem;
-  }
-  
-  .footer {
-    margin-top: 3rem;
-    font-size: 0.9rem;
-    color: var(--muted);
-    text-align: center;
-    border-top: 1px solid var(--border);
-    padding-top: 1rem;
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo img {
+  height: 100px;
+  width: auto;
+  margin-right: 1rem;
+  transition: filter 0.3s ease;
+}
+
+.title h1 {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+button {
+  margin-left: auto;
+  padding: 0.4rem 0.8rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.light {
+  --background-color: #fff;
+  --text-color: #000;
+  --primary-color: #0046bb;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.light .logo img {
+  filter: brightness(0);
+}
+
+.dark {
+  --background-color: #111;
+  --text-color: #eee;
+  --primary-color: #4eaaff;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.dark .logo img {
+  filter: brightness(10);
+}
+
+#theme-toggle {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
   
