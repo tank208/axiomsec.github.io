@@ -5,10 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Will Hall | AxiomSec</title>
   <style>
+    :root {
+      --bg: #121212;
+      --text: #e2e2e2;
+      --link: #64b5f6;
+      --muted: #aaaaaa;
+      --border: #2c2c2c;
+      --accent: #90caf9;
+    }
+
     body {
       font-family: system-ui, sans-serif;
-      background-color: #f9f9f9;
-      color: #222;
+      background-color: var(--bg);
+      color: var(--text);
       max-width: 900px;
       margin: 3rem auto;
       padding: 0 1.5rem;
@@ -16,22 +25,24 @@
     }
 
     header {
-      border-bottom: 2px solid #ccc;
+      border-bottom: 2px solid var(--border);
       margin-bottom: 2rem;
     }
 
     h1 {
       margin-bottom: 0;
+      font-size: 2.2rem;
+      color: var(--accent);
     }
 
     .subtitle {
-      color: #555;
+      color: var(--muted);
       margin-top: 0;
       font-size: 1.1rem;
     }
 
     a {
-      color: #0066cc;
+      color: var(--link);
       text-decoration: none;
     }
 
@@ -54,9 +65,9 @@
     .footer {
       margin-top: 3rem;
       font-size: 0.9rem;
-      color: #777;
+      color: var(--muted);
       text-align: center;
-      border-top: 1px solid #ddd;
+      border-top: 1px solid var(--border);
       padding-top: 1rem;
     }
   </style>
