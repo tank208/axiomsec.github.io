@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="axiomsec_shield.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Will Hall — Cybersecurity researcher focused on embedded systems and ICS/SCADA security.">
   <title>Will Hall | AxiomSec</title>
   <style>
     :root {
@@ -26,8 +28,21 @@
     }
 
     header {
-      border-bottom: 2px solid var(--border);
-      margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--border);
+    margin-bottom: 2rem;
+    }
+
+    .shield {
+      height: 48px;
+      width: 48px;
+      margin-right: 1rem;
+    }
+
+    .header-text {
+      display: flex;
+      flex-direction: column;
     }
 
     h1 {
@@ -76,16 +91,21 @@
 <body>
 
   <header>
-    <h1>Will Hall</h1>
-    <p class="subtitle">Cybersecurity Researcher | Embedded Systems | ICS/SCADA Security</p>
+    <div class="header-text">
+      <h1>Will Hall</h1>
+      <p class="subtitle">Cybersecurity Researcher | Embedded Systems | ICS/SCADA Security</p>
+      <p>Researcher at University of Idaho | AxiomSec.dev</p>
+    </div>
   </header>
-
+  
   <section>
     <h2>About Me</h2>
     <p>
       I’m a systems-focused developer with a background in aerospace, embedded logic, and control systems security.
       Currently conducting research at the University of Idaho focused on PLC security and secure integration of industrial protocols.
     </p>
+    <p><em>Let’s talk system security, embedded logic, or research collaborations.</em></p>
+
   </section>
 
   <section>
@@ -115,11 +135,15 @@
     <ul>
       <li>Email: <a href="mailto:will@axiomsec.dev">will@axiomsec.dev</a></li>
       <li>GitHub: <a href="https://github.com/tank208" target="_blank">github.com/tank208</a></li>
-      <li>Location: Idaho, USA</li>
+      <li>Resume: <a href="Public_Resume.pdf" target="_blank">Download pdf</a>
+      </li>
+      <li>Location: Oldtown, Idaho, USA</li>
     </ul>
   </section>
 
   <div class="footer">
+    <img src="axiomsec_shield.png" alt="AxiomSec Shield Logo" class="shield" />
+
     &copy; 2025 Will Hall | AxiomSec.dev — Built with GitHub Pages
   </div>
 
