@@ -15,6 +15,15 @@ body.dark {
     background: #121212;
     color: white;
   }
+
+h1 {
+  color: #222; /* Or something clearly not the link blue */
+}
+
+.toggle-label {
+  font-size: 0.8rem;
+  margin-left: 0.3rem;
+}
   
 
 header {
@@ -86,12 +95,27 @@ a:hover {
 }
 
 #theme-toggle {
-    position: absolute;
-    right: 1.5rem;
-    top: 1.5rem;
-    font-size: 1.2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: inherit;
+  padding: 0.5rem;
+}
+
+#theme-toggle .icon {
+  font-size: 1.2rem;
+}
+
+#theme-toggle .text {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  #theme-toggle .text {
+    display: none;
   }
-  
+}
