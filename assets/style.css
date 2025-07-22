@@ -446,3 +446,11 @@ body.dark .post-content em {
 .post-content li {
   margin-bottom: 0.5rem;
 }
+.skills-list {
+  columns: 2;
+  list-style: none;
+  padding: 0;
+}
+.skills-list li {
+  margin-bottom: 0.5rem;
+}
