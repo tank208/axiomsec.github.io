@@ -388,3 +388,63 @@ body.dark header {
     margin-top: 0.5rem;
   }
 }
+
+/* Blog Post Styling */
+.post {
+  max-width: 720px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--bg-light);
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 70, 187, 0.05);
+}
+body.dark .post {
+  background: #181b26;
+  color: var(--text-dark);
+}
+
+.post-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+body.dark .post-title {
+  color: var(--primary-light);
+}
+
+.post-meta {
+  color: #777;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+body.dark .post-meta {
+  color: #bbb;
+}
+
+.post-content {
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+.post-content h2 {
+  margin-top: 2rem;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+body.dark .post-content h2 {
+  color: var(--primary-light);
+}
+.post-content em {
+  color: #444;
+  font-style: italic;
+}
+body.dark .post-content em {
+  color: #ccc;
+}
+.post-content ul {
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+}
+.post-content li {
+  margin-bottom: 0.5rem;
+}

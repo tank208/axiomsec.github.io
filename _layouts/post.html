@@ -2,46 +2,10 @@
 layout: default
 ---
 
-<article class="post" style="max-width: 720px; margin: 3rem auto; padding: 2rem; background: var(--post-bg, #ffffff); border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-  <h1 class="post-title" style="font-size: 2.4rem; margin-bottom: 0.5rem;">{{ page.title }}</h1>
-  <p class="post-meta" style="color: #555; font-size: 0.95rem; margin-bottom: 2rem;">
-    {{ page.date | date: "%B %d, %Y" }}
-  </p>
-  <div class="post-content" style="line-height: 1.7; font-size: 1.05rem;">
+<article class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <p class="post-meta">{{ page.date | date: "%B %d, %Y" }}</p>
+  <div class="post-content">
     {{ content }}
   </div>
 </article>
-
-<style>
-  /* Responsive heading and clean article layout */
-  .post-content h2 {
-    font-size: 1.5rem;
-    margin-top: 2rem;
-    color: #0046bb;
-  }
-  .post-content ul {
-    padding-left: 1.4rem;
-    margin-top: 1rem;
-  }
-  .post-content li {
-    margin-bottom: 0.5rem;
-  }
-  .post-content em {
-    color: #333;
-  }
-
-  /* 🔥 Dark Mode Compatibility */
-  body.dark .post {
-    background: #1c1c1c !important;
-    color: #eee;
-  }
-  body.dark .post-meta {
-    color: #aaa !important;
-  }
-  body.dark .post-content h2 {
-    color: #4eaaff !important;
-  }
-  body.dark .post-content em {
-    color: #ccc !important;
-  }
-</style>
