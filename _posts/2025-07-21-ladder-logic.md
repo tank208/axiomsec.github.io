@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Why Ladder Logic Still Matters
-date: 2025-07-22 09:00:00 -0700
+date: 2025-07-21 09:00:00 -0700
 categories:
   - PLC
   - ICS
