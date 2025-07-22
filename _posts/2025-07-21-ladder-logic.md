@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Why Ladder Logic Still Matters
-date: 2025-07-21 09:00:00 -0700
+date: 2025-07-21
+categories: plc logic
 ---
 
 
@@ -40,5 +41,5 @@ With Arduino Opta, we’re combining the soul of industrial reliability with the
     
 
 
-> “Ladder logic is like a rulebook written in plain sight, guiding machines to act safely and predictably. It’s not flashy, but it’s faithful and that’s what keeps the world running.”
+“Ladder logic is like a rulebook written in plain sight, guiding machines to act safely and predictably. It’s not flashy, but it’s faithful and that’s what keeps the world running.”
 
