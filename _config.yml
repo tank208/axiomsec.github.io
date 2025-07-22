@@ -1,5 +1,5 @@
 title: AxiomSec
 description: Research in cybersecurity and embedded systems
-baseurl: "" # leave blank for root site
-url: "https://axiomsec.github.io"
+baseurl: ""
+url: "https://tank208.github.io"
 theme: minima
