@@ -19,7 +19,4 @@ title: Blog
       <span class="label">{{ post.date | date: "%b %d, %Y" }}</span>
     </article>
   {% endfor %}
-  {% if site.posts == empty %}
-    <p style="text-align:center; color:red;"><em>No posts found. Check _posts directory and post date.</em></p>
-  {% endif %}
 </section>
