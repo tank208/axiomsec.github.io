@@ -1,4 +1,28 @@
----
-layout: default
-title: Blog
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <header>
+    <h1><a href="/">AxiomSec</a></h1>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/aboutme.html">About Me</a>
+      <a href="/projects.html">Projects</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/blog.html" class="active">Blog</a>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <small>&copy; 2025 AxiomSec.dev • <a href="/contact.html">Contact</a> • <a href="/aboutme.html">About</a></small>
+  </footer>
+</body>
+</html>

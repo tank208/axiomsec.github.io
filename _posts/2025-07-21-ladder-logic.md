@@ -8,6 +8,7 @@ categories:
   - Education
 ---
 
+
 **"Let me show you how the system thinks — and why it matters."**
 
 Ladder logic is the _language_ that programmable logic controllers (PLCs) speak. But unlike code that looks like math or strange words on a screen, ladder logic looks like... a ladder. Literally. It has two vertical lines, like rails, and a series of horizontal rungs in between. Each rung is a rule. A sentence. A decision the machine will make.
