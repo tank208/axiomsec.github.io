@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="description" content="Cybersecurity and embedded systems research by Will Hall. Projects include PLC platforms, ICS security, and secure protocol design.">
+  <meta name="keywords" content="Cybersecurity, Embedded Systems, PLC, ICS Security, Arduino Opta, Ladder Logic, Zero Trust, Research, Will Hall">
+  <meta name="author" content="Will Hall">
+  <meta property="og:title" content="AxiomSec — Will Hall's Cybersecurity Projects">
+  <meta property="og:description" content="Projects, research, and insights on embedded systems and industrial cybersecurity.">
+  <meta property="og:image" content="assets/new_logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AxiomSec</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/new_logo.svg">
+</head>
+<body class="light">
+  <header>
+<div class="logo-title">
+      <img src="/assets/new_logo.svg" alt="AxiomSec Logo" class="logo" />
+  <span class="site-title"><a href="https://axiomsec.dev">AxiomSec</span></a>
+  </div>
+  <nav class="main-nav">
+    <a href="index.html" target="_blank" rel="noopener noreferrer" class="active">Home</a>
+    <a href="aboutme.html" target="_blank" rel="noopener noreferrer" class="active">About Me</a>
+    <a href="projects.html" target="_blank" rel="noopener noreferrer">Projects</a>
+    <a href="contact.html" target="_blank" rel="noopener noreferrer">Contact</a>
+    <a href="/blog/" target="_blank" rel="noopener noreferrer">Blog</a>
+  </nav>
+  <button id="theme-toggle" aria-label="Toggle light/dark mode">
+    <span class="icon">🌙</span>
+    <span class="text">Toggle Theme</span>
+  </button>  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Security-First Engineering for Embedded Systems</h1>
+      <p>
+        <br>
+        <strong>Specialized in PLC and Embedded Logic Cybersecurity</strong><br>
+        <em>Building and securing next-generation industrial systems.</em>
+      </p>
+      <a class="cta" href="mailto:will@axiomsec.dev" target="_blank" rel="noopener noreferrer">Connect with Me</a>
+    </section>
+
+    <section class="projects" id="projects">
+      <h2>Projects & Research</h2>
+      <div class="project-list">
+        <div class="project-card">
+          <h3>
+            <a
+              href="https://github.com/tank208/plc-student-demo-platform"
+              target="_blank"
+              rel="noopener"
+              title="PLC Student Demo Platform"
+            >
+              PLC Student Demo Platform
+            </a>
+          </h3>
+          <p>
+            Research-grade platform using Arduino Opta for teaching PLC concepts, secure coding, and protocol simulation.<br>
+            <span class="label">Tech:</span> Ladder Logic, IEC 61131-3, Modbus TCP
+          </p>
+        </div>
+        <div class="project-card">
+          <h3>
+            <a
+              href="https://github.com/tank208/plc-bridge"
+              target="_blank"
+              rel="noopener"
+              title="PLC-Bridge"
+            >
+              PLC-Bridge
+            </a>
+          </h3>
+          <p>
+            Lightweight Python interface for Linux ↔ Arduino Opta PLCs communications, ideal for automation labs.<br>
+            <span class="label">Tech:</span> Python, Serial, Automation
+          </p>
+        </div>
+        <div class="project-card">
+          <h3>
+            <span class="tooltip">
+              <span tabindex="0" aria-label="DEVLOG (internal)">DEVLOG (Obsidian)</span>
+              <span class="tooltiptext">Internal log. Access by request.</span>
+            </span>
+          </h3>
+          <p>
+            Markdown-based research journal for development, tracking, and curriculum design.<br>
+            <span class="label">Internal log. Access by request.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact</h2>
+      <ul>
+        <li>
+          <span>GitHub:</span>
+          <a href="https://github.com/tank208" target="_blank" rel="noopener">github.com/tank208</a>
+        </li>
+        <li>
+          <span>Location:</span> Oldtown, Idaho, USA
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <small>&copy; 2025 AxiomSec.dev • <a href="contact.html">Contact</a> • <a href="aboutme.html">About</a></small>
+  </footer>
+
+
+<script>
+  // --- Helpers ---
+  function setCookie(name, value, days) {
+    const expires = new Date(Date.now() + days * 864e5).toUTCString();
+    document.cookie = name + '=' + encodeURIComponent(value) + 
+      '; expires=' + expires + 
+      '; path=/' + 
+      '; domain=.axiomsec.dev' + 
+      '; SameSite=Lax; Secure';
+  }
+
+  function getCookie(name) {
+    return document.cookie
+      .split('; ')
+      .find(row => row.startsWith(name + '='))
+      ?.split('=')[1];
+  }
+
+  // --- Setup ---
+  const themeToggle = document.getElementById('theme-toggle');
+  const body = document.body;
+  const savedTheme = getCookie('theme');
+
+  if (savedTheme === 'dark' || savedTheme === 'light') {
+    body.classList.remove('light', 'dark');
+    body.classList.add(savedTheme);
+    themeToggle.querySelector('.icon').textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+  }
+
+  // --- Toggle Behavior ---
+  themeToggle.addEventListener('click', () => {
+    const newTheme = body.classList.contains('dark') ? 'light' : 'dark';
+    body.classList.remove('light', 'dark');
+    body.classList.add(newTheme);
+    setCookie('theme', newTheme, 365);
+    themeToggle.querySelector('.icon').textContent = newTheme === 'dark' ? '☀️' : '🌙';
+  });
+</script>
+</body>
+</html>
