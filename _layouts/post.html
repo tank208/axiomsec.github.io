@@ -2,87 +2,46 @@
 layout: default
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta name="description" content="Cybersecurity and embedded systems research by Will Hall.">
-  <meta name="keywords" content="Cybersecurity, Embedded Systems, PLC, ICS Security, Arduino Opta, Ladder Logic, Zero Trust, Research, Will Hall">
-  <meta name="author" content="Will Hall">
-  <meta property="og:title" content="{{ page.title }} | AxiomSec">
-  <meta property="og:description" content="Insights on PLCs, security protocols, and embedded systems.">
-  <meta property="og:image" content="/assets/new_logo.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }} | AxiomSec</title>
-  <link rel="stylesheet" href="/style.css">
-  <link rel="icon" type="image/svg+xml" href="/assets/new_logo.svg">
-</head>
+<article class="post" style="max-width: 720px; margin: 3rem auto; padding: 2rem; background: var(--post-bg, #ffffff); border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+  <h1 class="post-title" style="font-size: 2.4rem; margin-bottom: 0.5rem;">{{ page.title }}</h1>
+  <p class="post-meta" style="color: #555; font-size: 0.95rem; margin-bottom: 2rem;">
+    {{ page.date | date: "%B %d, %Y" }}
+  </p>
+  <div class="post-content" style="line-height: 1.7; font-size: 1.05rem;">
+    {{ content }}
+  </div>
+</article>
 
-<body class="light">
-  <header>
-    <div class="logo-title">
-      <img src="/assets/new_logo.svg" alt="AxiomSec Logo" class="logo" />
-      <span class="site-title"><a href="/">AxiomSec</a></span>
-    </div>
-    <nav class="main-nav">
-      <a href="/index.html">Home</a>
-      <a href="/aboutme.html">About Me</a>
-      <a href="/projects.html">Projects</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/blog.html">Blog</a>
-    </nav>
-    <button id="theme-toggle" aria-label="Toggle light/dark mode">
-      <span class="icon">🌙</span>
-      <span class="text">Toggle Theme</span>
-    </button>
-  </header>
+<style>
+  /* Responsive heading and clean article layout */
+  .post-content h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    color: #0046bb;
+  }
+  .post-content ul {
+    padding-left: 1.4rem;
+    margin-top: 1rem;
+  }
+  .post-content li {
+    margin-bottom: 0.5rem;
+  }
+  .post-content em {
+    color: #333;
+  }
 
-  <main>
-    <article class="post" style="max-width: 720px; margin: 3rem auto; padding: 2rem; background: var(--post-bg, #fff); border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-      <h1 class="post-title" style="font-size: 2.4rem; margin-bottom: 0.5rem;">{{ page.title }}</h1>
-      <p class="post-meta" style="color: gray; font-size: 0.95rem; margin-bottom: 2rem;">
-        {{ page.date | date: "%B %d, %Y" }}
-      </p>
-      <div class="post-content" style="line-height: 1.7; font-size: 1.05rem;">
-        {{ content }}
-      </div>
-    </article>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 AxiomSec.dev • <a href="/contact.html" style="color:white;">Contact</a></p>
-  </footer>
-
-  <script>
-    // --- Theme Toggle Logic ---
-    function setCookie(name, value, days) {
-      const expires = new Date(Date.now() + days * 864e5).toUTCString();
-      document.cookie = name + '=' + encodeURIComponent(value) + 
-        '; expires=' + expires + 
-        '; path=/; domain=.axiomsec.dev; SameSite=Lax; Secure';
-    }
-    function getCookie(name) {
-      return document.cookie.split('; ').find(row => row.startsWith(name + '='))?.split('=')[1];
-    }
-
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
-    const savedTheme = getCookie('theme');
-
-    if (savedTheme === 'dark' || savedTheme === 'light') {
-      body.classList.remove('light', 'dark');
-      body.classList.add(savedTheme);
-      themeToggle.querySelector('.icon').textContent = savedTheme === 'dark' ? '☀️' : '🌙';
-    }
-
-    themeToggle.addEventListener('click', () => {
-      const newTheme = body.classList.contains('dark') ? 'light' : 'dark';
-      body.classList.remove('light', 'dark');
-      body.classList.add(newTheme);
-      setCookie('theme', newTheme, 365);
-      themeToggle.querySelector('.icon').textContent = newTheme === 'dark' ? '☀️' : '🌙';
-    });
-  </script>
-</body>
-</html>
+  /* 🔥 Dark Mode Compatibility */
+  body.dark .post {
+    background: #1c1c1c !important;
+    color: #eee;
+  }
+  body.dark .post-meta {
+    color: #aaa !important;
+  }
+  body.dark .post-content h2 {
+    color: #4eaaff !important;
+  }
+  body.dark .post-content em {
+    color: #ccc !important;
+  }
+</style>
