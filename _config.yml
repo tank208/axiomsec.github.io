@@ -3,4 +3,6 @@ description: Research in cybersecurity and embedded systems
 baseurl: ""
 url: "https://axiomsec.dev"
 theme: minima
+permalink: /blog/:title/
+
 # Force rebuild
