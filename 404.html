@@ -35,3 +35,43 @@
 
 <h1>404 – Not Found</h1>
 <p>This page doesn't exist. Head <a href="/">home</a>.</p>
+
+
+<script>
+  // --- Helpers ---
+  function setCookie(name, value, days) {
+    const expires = new Date(Date.now() + days * 864e5).toUTCString();
+    document.cookie = name + '=' + encodeURIComponent(value) + 
+      '; expires=' + expires + 
+      '; path=/' + 
+      '; domain=.axiomsec.dev' + 
+      '; SameSite=Lax; Secure';
+  }
+
+  function getCookie(name) {
+    return document.cookie
+      .split('; ')
+      .find(row => row.startsWith(name + '='))
+      ?.split('=')[1];
+  }
+
+  // --- Setup ---
+  const themeToggle = document.getElementById('theme-toggle');
+  const body = document.body;
+  const savedTheme = getCookie('theme');
+
+  if (savedTheme === 'dark' || savedTheme === 'light') {
+    body.classList.remove('light', 'dark');
+    body.classList.add(savedTheme);
+    themeToggle.querySelector('.icon').textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+  }
+
+  // --- Toggle Behavior ---
+  themeToggle.addEventListener('click', () => {
+    const newTheme = body.classList.contains('dark') ? 'light' : 'dark';
+    body.classList.remove('light', 'dark');
+    body.classList.add(newTheme);
+    setCookie('theme', newTheme, 365);
+    themeToggle.querySelector('.icon').textContent = newTheme === 'dark' ? '☀️' : '🌙';
+  });
+</script>
