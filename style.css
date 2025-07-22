@@ -394,9 +394,9 @@ body.dark header {
   max-width: 720px;
   margin: 3rem auto;
   padding: 2rem;
-  background: var(--bg-light);
+  background: var(--bg-light, #ffffff);
   border-radius: 14px;
-  box-shadow: 0 4px 12px rgba(0, 70, 187, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 body.dark .post {
   background: #181b26;
@@ -407,10 +407,10 @@ body.dark .post {
   font-size: 2.2rem;
   font-weight: 800;
   margin-bottom: 0.5rem;
-  color: var(--primary-color);
+  color: var(--primary-color, #0046bb);
 }
 body.dark .post-title {
-  color: var(--primary-light);
+  color: var(--primary-light, #4eaaff);
 }
 
 .post-meta {
@@ -428,22 +428,20 @@ body.dark .post-meta {
 }
 .post-content h2 {
   margin-top: 2rem;
-  color: var(--primary-color);
+  color: var(--primary-color, #0046bb);
   font-size: 1.5rem;
 }
 body.dark .post-content h2 {
-  color: var(--primary-light);
+  color: var(--primary-light, #4eaaff);
 }
 .post-content em {
   color: #444;
-  font-style: italic;
 }
 body.dark .post-content em {
   color: #ccc;
 }
 .post-content ul {
   margin-left: 1.5rem;
-  margin-top: 1rem;
 }
 .post-content li {
   margin-bottom: 0.5rem;
