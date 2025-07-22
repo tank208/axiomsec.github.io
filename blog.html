@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>axiomsec.dev — Cybersecurity by Will Hall</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+</head>
+<body class="light">
+  <header>
+<div class="logo-title">
+      <img src="new_logo.svg" alt="AxiomSec Logo" class="logo" />
+  <span class="site-title"><a href="https://axiomsec.dev">AxiomSec</span></a>
+  </div>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="aboutme.html" class="active">About Me</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+  <button id="theme-toggle" aria-label="Toggle light/dark mode">
+    <span class="icon">🌙</span>
+    <span class="text">Toggle Theme</span>
+  </button>  </header>
+
+<body>
+    <main>
+    <section class="hero">
+      <h1>Blog</h1>
+      <p>
+        <br>
+        <strong>Thoughts and news items that are related to embedded systems</strong><br>
+        <em>Building and securing next-generation industrial systems.</em>
+      </p>
+      <a class="cta" href="mailto:will@axiomsec.dev">Connect with Me</a>
+    </section>
+
+
+  <script>
+    // Theme toggle logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      body.classList.toggle('light');
+      const icon = themeToggle.querySelector('.icon');
+      icon.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
+    });
+  </script>
+</body>
+</html>

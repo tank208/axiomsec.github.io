@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>axiomsec.dev — Cybersecurity by Will Hall</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+</head>
+<body class="light">
+  <header>
+<div class="logo-title">
+      <img src="new_logo.svg" alt="AxiomSec Logo" class="logo" />
+  <span class="site-title"><a href="https://axiomsec.dev">AxiomSec</span></a>
+  </div>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="aboutme.html" class="active">About Me</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+  <button id="theme-toggle" aria-label="Toggle light/dark mode">
+    <span class="icon">🌙</span>
+    <span class="text">Toggle Theme</span>
+  </button>  </header>
+
+
+  <body>
+    <section class="hero">
+      <h1>Current and past projects</h1>
+      <p>
+        <br>
+        <strong></strong><br>
+        <em></em>
+      </p>
+      <a class="cta" href="mailto:will@axiomsec.dev">Connect with Me</a>
+    </section>
+
+    <section class="projects-list">
+      <div class="project-card">
+        <h3>
+          <a
+            href="https://github.com/tank208/plc-student-demo-platform"
+            target="_blank"
+            rel="noopener"
+            title="PLC Student Demo Platform"
+          >
+            PLC Student Demo Platform
+          </a>
+        </h3>
+        <p>
+          <strong>Role: Lead Researcher</strong><br>
+          Platform for teaching PLC concepts, secure coding, and protocol simulation, funded by an undergraduate research grant at University of Idaho.
+        </p>
+        <ul>
+          <li>Arduino Opta-based modular hardware</li>
+          <li>Ladder Logic, IEC 61131-3, Modbus TCP</li>
+          <li>Open-source curriculum and interactive demos</li>
+        </ul>
+        <span class="label">GitHub Repo: <a href="https://github.com/tank208/plc-student-demo-platform" target="_blank" rel="noopener">plc-student-demo-platform</a></span>
+      </div>
+      <div class="project-card">
+        <h3>
+          <a
+            href="https://github.com/tank208/plc-bridge"
+            target="_blank"
+            rel="noopener"
+            title="PLC-Bridge"
+          >
+            PLC-Bridge
+          </a>
+        </h3>
+        <p>
+          <strong>Role: Developer & Maintainer</strong><br>
+          Lightweight Python interface for Linux and Arduino Opta PLC communications, purpose-built for automation labs and rapid prototyping.
+        </p>
+        <ul>
+          <li>Async serial communication</li>
+          <li>Lab-tested on Linux, cross-platform adaptability</li>
+          <li>Ideal for students and industrial educators</li>
+        </ul>
+        <span class="label">GitHub Repo: <a href="https://github.com/tank208/plc-bridge" target="_blank" rel="noopener">plc-bridge</a></span>
+      </div>
+
+      <div class="project-card">
+        <h3>
+          DEVLOG (Obsidian)
+        </h3>
+        <p>
+          <strong>Role: Author & Designer</strong><br>
+          Markdown-based internal research journal for development tracking, testing, and curriculum design in embedded security.
+        </p>
+        <ul>
+            <li>Project management and instructional logs</li>
+          <li>Insights on instructional design, lesson outcomes</li>
+          <li>Access by request (internal documentation)</li>
+        </ul>
+        <span class="label">Status: Internal – ask for access</span>
+      </div>
+    </section>
+
+
+  <script>
+    // Theme toggle logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      body.classList.toggle('light');
+      const icon = themeToggle.querySelector('.icon');
+      icon.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
+    });
+  </script>
+</body>
+</html>
