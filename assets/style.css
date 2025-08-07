@@ -454,3 +454,338 @@ body.dark .post-content em {
 .skills-list li {
   margin-bottom: 0.5rem;
 }
+
+/* Bridge Strategy Enhancements - Add to bottom of /assets/style.css */
+.hero-subtext {
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 15px;
+  font-style: italic;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mission-statement {
+  background: #f8faff;
+  padding: 40px 20px;
+  margin: 40px 0;
+  border-radius: 13px;
+}
+body.dark .mission-statement {
+  background: #181b26;
+}
+
+.mission-statement h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+body.dark .mission-statement h2 {
+  color: var(--primary-light);
+}
+
+.challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.problem, .solution, .impact {
+  background: var(--bg-light);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 70, 187, 0.1);
+  border-left: 4px solid;
+}
+body.dark .problem, 
+body.dark .solution, 
+body.dark .impact {
+  background: #1a1d28;
+  box-shadow: 0 2px 10px rgba(78, 170, 255, 0.1);
+}
+
+.problem {
+  border-left-color: #e74c3c;
+}
+.solution {
+  border-left-color: #27ae60;
+}
+.impact {
+  border-left-color: var(--primary-color);
+}
+
+.problem h3 { 
+  color: #e74c3c; 
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+.solution h3 { 
+  color: #27ae60; 
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+.impact h3 { 
+  color: var(--primary-color); 
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+body.dark .impact h3 {
+  color: var(--primary-light);
+}
+
+.project-card.featured {
+  border: 2px solid var(--primary-color);
+  background: #f0f7ff;
+  position: relative;
+}
+body.dark .project-card.featured {
+  background: #1a2332;
+  border-color: var(--primary-light);
+}
+
+.project-status {
+  background: #e3f2fd;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #1565c0;
+}
+body.dark .project-status {
+  background: #1e3a5f;
+  color: var(--primary-light);
+}
+
+.project-highlights ul {
+  background: var(--bg-light);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+  list-style: none;
+  padding-left: 20px;
+}
+body.dark .project-highlights ul {
+  background: #0f1419;
+}
+
+.project-highlights li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.project-highlights li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.audience-value {
+  padding: 40px 20px;
+  background: var(--bg-light);
+  margin: 40px 0;
+}
+body.dark .audience-value {
+  background: var(--bg-dark);
+}
+
+.audience-value h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+body.dark .audience-value h2 {
+  color: var(--primary-light);
+}
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.audience-card {
+  background: #f8faff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 70, 187, 0.1);
+  border: 1px solid #e0eafc;
+}
+body.dark .audience-card {
+  background: #181b26;
+  border-color: #4eaaff33;
+  box-shadow: 0 2px 10px rgba(78, 170, 255, 0.1);
+}
+
+.audience-card h3 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+body.dark .audience-card h3 {
+  color: var(--primary-light);
+}
+
+.audience-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.audience-card li {
+  padding: 8px 0;
+  padding-left: 20px;
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+body.dark .audience-card li {
+  border-bottom-color: #333;
+}
+
+.audience-card li:last-child {
+  border-bottom: none;
+}
+
+.audience-card li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+body.dark .audience-card li::before {
+  color: var(--primary-light);
+}
+
+.contact-enhanced {
+  padding: 40px 20px;
+  background: #f8faff;
+  margin: 40px 0;
+  border-radius: 13px;
+}
+body.dark .contact-enhanced {
+  background: #181b26;
+}
+
+.contact-enhanced h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+body.dark .contact-enhanced h2 {
+  color: var(--primary-light);
+}
+
+.contact-purposes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.contact-type {
+  background: var(--bg-light);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+}
+body.dark .contact-type {
+  background: #1a1d28;
+  border-left-color: var(--primary-light);
+}
+
+.contact-type h3 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+body.dark .contact-type h3 {
+  color: var(--primary-light);
+}
+
+.contact-info {
+  background: var(--bg-light);
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+body.dark .contact-info {
+  background: #1a1d28;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info span {
+  font-weight: 600;
+  color: var(--primary-color);
+  min-width: 60px;
+}
+body.dark .contact-info span {
+  color: var(--primary-light);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .challenge-grid,
+  .audience-grid,
+  .contact-purposes {
+    grid-template-columns: 1fr;
+  }
+  
+  .mission-statement,
+  .audience-value,
+  .contact-enhanced {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 30px 15px;
+  }
+  
+  .hero-subtext {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mission-statement h2,
+  .audience-value h2,
+  .contact-enhanced h2 {
+    font-size: 1.5rem;
+  }
+  
+  .problem h3,
+  .solution h3,
+  .impact h3,
+  .audience-card h3,
+  .contact-type h3 {
+    font-size: 1.1rem;
+  }
+}
